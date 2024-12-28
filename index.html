@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Coming Soon</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        font-family: 'Arial', sans-serif;
+        background-color: #2c3e50; /* Solid background color */
+        color: white;
+        overflow: hidden;
+      }
+
+      .content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: bounce 2s infinite; /* Infinite bounce animation */
+      }
+
+      p {
+        font-size: 24px;
+        margin-bottom: 30px;
+        font-weight: lighter;
+        opacity: 0;
+        animation: fadeInText 2s 1.5s forwards;
+      }
+
+      .contact-info {
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 40px;
+        opacity: 0;
+        animation: fadeInText 2s 2.5s forwards;
+      }
+
+      .contact-info a {
+        color: #e74c3c;
+        text-decoration: none;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        color: #ecf0f1;
+      }
+
+      /* Animation Effects */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      @keyframes fadeInText {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Infinite Swirling Background Animation */
+      .swirl {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.2),
+          rgba(0, 0, 0, 0)
+        );
+        border-radius: 50%;
+        animation: swirl 6s linear infinite;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      @keyframes swirl {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      /* Adding a fun animated border effect around the text */
+      .fun-border {
+        position: relative;
+        padding: 20px;
+        display: inline-block;
+        border: 2px solid #e74c3c;
+        border-radius: 10px;
+        animation: borderBlink 1.5s infinite;
+      }
+
+      @keyframes borderBlink {
+        0% {
+          border-color: #e74c3c;
+        }
+        50% {
+          border-color: #f39c12;
+        }
+        100% {
+          border-color: #e74c3c;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swirl"></div>
+    <!-- Infinite swirling background effect -->
+
+    <div class="content">
+      <div class="fun-border">
+        <h1>Sudarshan Gora</h1>
+        <h2>Coming Soon!</h2>
+      </div>
+      <p>We are working hard to bring you something amazing. Stay tuned!</p>
+      <div class="contact-info">
+        <p>
+          If you need to reach out, feel free to email me at
+          <a href="mailto:gorasudarshan@gmail.com">gorasudarshan@gmail.com</a>
+          or call <a href="tel:+9779849423493">+977 9849423493</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2024 My Portfolio</p>
+    </div>
+  </body>
+</html>
